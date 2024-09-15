@@ -35,8 +35,6 @@ import {
               {
                 patternDescription: "Choose an asset to grow your wealth",
                 name: "asset",
-                label: "Send a message on-chain using a Memo",
-                type: "textarea",
               },
             ],
           },
