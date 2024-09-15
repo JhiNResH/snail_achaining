@@ -23,7 +23,7 @@ import {
   export const GET = async (req: Request) => {
     const payload: ActionGetResponse = {
       title: "Snail Finance",
-      icon: new URL("/solana_devs.jpg", new URL(req.url).origin).toString(),
+      icon: new URL("/snail.png", new URL(req.url).origin).toString(),
       description: "Grow your wealth with Snail Finance",
       label: "Get Started",
       links: {
