@@ -1,6 +1,3 @@
-/**
- * Solana Action chaining example
- */
 
 import {
     ActionPostResponse,
@@ -25,19 +22,19 @@ import {
   
   export const GET = async (req: Request) => {
     const payload: ActionGetResponse = {
-      title: "Simple Action Chaining Example",
+      title: "Snail Finance",
       icon: new URL("/solana_devs.jpg", new URL(req.url).origin).toString(),
-      description: "Perform a simple action chain",
-      label: "Send Memo",
+      description: "Grow your wealth with Snail Finance",
+      label: "Get Started",
       links: {
         actions: [
           {
-            href: "/api/actions/chaining-basics",
-            label: "Send Memo",
+            href: "/api/actions/ChooseAsset",
+            label: "Choose Asset",
             parameters: [
               {
-                patternDescription: "Short message here",
-                name: "memo",
+                patternDescription: "Choose an asset to grow your wealth",
+                name: "asset",
                 label: "Send a message on-chain using a Memo",
                 type: "textarea",
               },
@@ -128,7 +125,7 @@ import {
              */
             next: {
               type: "post",
-              href: "/api/actions/chaining-basics/next-action",
+              href: "/api/actions/ChooseAsset/next-action",
             },
           },
         },
